@@ -47,7 +47,7 @@ function draw() {
     let x = random(-width/2,width/2)
     let y = random(-height/2,height/2)
     point(x,y)
-    let d = dist(0,0,x,y)
+    let d = distancia(0,0,x,y)
     if (d <= radio) {
       contador++
     }
@@ -58,4 +58,8 @@ function draw() {
   text("Dentro: "+contador,-150,330)
   text("Total: "+puntos,-150,360)
   text("Pi: "+pi,-150,390)
+}
+
+function distancia(x1,y1,x2,y2) {
+  return sqrt(pow(x2-x1,2)+pow(y2-y1,2))
 }
